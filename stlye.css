@@ -1,11 +1,67 @@
+/* 全体 */
 body {
-  font-family: sans-serif;
-  text-align: center;
-  padding: 30px;
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
 }
 
+/* 中央レイアウト */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* タイトル */
+h1 {
+  color: #1e88e5;
+  margin-bottom: 10px;
+}
+
+/* 説明文 */
+.description {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* イラスト */
+.top-image {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* 質問カード */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 質問文 */
+#question {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+/* ボタン */
 button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #1e88e5;
+  color: white;
+}
+
+button:hover {
+  background-color: #1565c0;
 }
