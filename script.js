@@ -48,7 +48,7 @@ function showResult() {
     result = "注意";
     advice = "基本的な対策はできていますが、パスワード管理や更新頻度を見直すとより安全です。";
     resultClass = "medium";
-  } else if (score <= 30) {
+  } else if (score <= 25) {
     result = "高リスク";
     advice = "フィッシング詐欺や情報漏洩に遭う可能性があります。対策を見直しましょう。";
     resultClass = "high";
@@ -81,4 +81,5 @@ function showResult() {
 function restart() {
     location.reload();
   }
+
 
