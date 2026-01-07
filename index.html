@@ -6,14 +6,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>サイバー犯罪リスク診断</h1>
+<div class="container">
+    <img src="images/security.png" alt="セキュリティイラスト" class="top-image">
 
-<div id="question"></div>
+    <h1>サイバー犯罪リスク診断</h1>
+    <p class="description">
+        日常のネット利用から、サイバー犯罪に巻き込まれるリスクをチェックします
+    </p>
 
-<div id="choices">
-    <button onclick="answer(0)">いいえ</button>
-    <button onclick="answer(2)">たまにある</button>
-    <button onclick="answer(3)">よくある</button>
+    <div class="card">
+        <div id="question"></div>
+
+        <div id="choices">
+            <button onclick="answer(0)">いいえ</button>
+            <button onclick="answer(2)">たまにある</button>
+            <button onclick="answer(3)">よくある</button>
+        </div>
+    </div>
 </div>
 
 <script src="script.js"></script>
