@@ -54,12 +54,17 @@ function showResult() {
   }
 
   document.body.innerHTML = `
+  <div class="container">
     <h1>診断結果</h1>
-    <h2>${result}</h2>
-    <p>あなたのリスクスコア：${score}</p>
-    <p>${advice}</p>
-    <p style="font-size: 0.9em; color: gray;">
-      ※本診断は教育目的であり、実際の被害を保証するものではありません。
-    </p>
-  `;
+    <div class="card">
+      <h2>${result}</h2>
+      <p>あなたのリスクスコア：${score}</p>
+      <p>${advice}</p>
+      <p style="font-size: 0.85em; color: gray;">
+        ※本診断は教育目的であり、実際の被害を保証するものではありません。
+      </p>
+    </div>
+  </div>
+`;
 }
+
