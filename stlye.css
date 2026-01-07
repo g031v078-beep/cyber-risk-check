@@ -33,7 +33,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* 質問カード */
+/* カード */
 .card {
   background: white;
   border-radius: 12px;
@@ -66,28 +66,28 @@ button:hover {
   background-color: #1565c0;
 }
 
-/* 診断結果の文字色 */
+/* 診断結果 */
 .result {
   font-size: 1.6em;
   margin-bottom: 10px;
 }
 
-/* 低リスク（青） */
+/* 低リスク */
 .result.low {
   color: #1e88e5;
 }
 
-/* 注意（オレンジ） */
+/* 注意 */
 .result.medium {
   color: #f9a825;
 }
 
-/* 高リスク（赤） */
+/* 高リスク */
 .result.high {
   color: #e53935;
 }
 
-/* 非常に高リスク（濃い赤） */
+/* 非常に高リスク */
 .result.very-high {
   color: #b71c1c;
 }
