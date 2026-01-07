@@ -38,33 +38,47 @@ function answer(point) {
 function showResult() {
   let result = "";
   let advice = "";
+  let resultClass = "";
 
   if (score <= 10) {
     result = "低リスク";
     advice = "安全意識が高い状態です。今後も継続してセキュリティ対策を行いましょう。";
+    resultClass = "low";
   } else if (score <= 20) {
     result = "注意";
     advice = "基本的な対策はできていますが、パスワード管理や更新頻度を見直すとより安全です。";
+    resultClass = "medium";
   } else if (score <= 30) {
     result = "高リスク";
-    advice = "フィッシング詐欺や情報漏洩に遭う可能性があります。二段階認証や公式サイト確認を徹底しましょう。";
+    advice = "フィッシング詐欺や情報漏洩に遭う可能性があります。対策を見直しましょう。";
+    resultClass = "high";
   } else {
     result = "非常に高リスク";
-    advice = "早急なセキュリティ対策が必要です。被害に遭う前に行動を見直してください。";
+    advice = "早急なセキュリティ対策が必要です。";
+    resultClass = "very-high";
   }
 
   document.body.innerHTML = `
-  <div class="container">
-    <h1>診断結果</h1>
-    <div class="card">
-      <h2>${result}</h2>
-      <p>あなたのリスクスコア：${score}</p>
-      <p>${advice}</p>
-      <p style="font-size: 0.85em; color: gray;">
-        ※本診断は教育目的であり、実際の被害を保証するものではありません。
-      </p>
+    <div class="container">
+      <h1>診断結果</h1>
+
+      <div class="card">
+        <h2 class="result ${resultClass}">${result}</h2>
+        <p>あなたのリスクスコア：${score}</p>
+        <p>${advice}</p>
+
+        <button class="restart-button" onclick="restart()">
+          もう一度診断する
+        </button>
+
+        <p style="font-size: 0.85em; color: gray;">
+          ※本診断は教育目的であり、実際の被害を保証するものではありません。
+        </p>
+      </div>
     </div>
-  </div>
-`;
+  `;
 }
+function restart() {
+    location.reload();
+  }
 
