@@ -3,13 +3,25 @@ const questions = [
   "知らない送信元のリンクを開くことがある",
   "フリーWi-Fiでログインが必要なサービスを使う",
   "OSやアプリの更新を後回しにしがち",
-  "SNSに個人情報を載せることがある"
+  "SNSに個人情報を載せることがある",
+  "二段階認証を設定していないサービスがある",
+  "不審なポップアップや警告画面を見たことがある",
+  "アプリを公式ストア以外から入れたことがある",
+  "個人情報を入力する際、URLを確認しないことがある",
+  "知らない人からの友達申請を承認することがある",
+  "パスワードをメモ帳やスクショで保存している",
+  "セキュリティソフトを入れていない、または期限切れ",
+  "ネット通販で安すぎるサイトを利用したことがある",
+  "利用していないアカウントを放置している",
+  "フィッシング詐欺について詳しく知らない"
 ];
 
 let current = 0;
 let score = 0;
 
 const questionEl = document.getElementById("question");
+
+// 最初の質問表示
 questionEl.textContent = questions[current];
 
 function answer(point) {
@@ -27,24 +39,27 @@ function showResult() {
   let result = "";
   let advice = "";
 
-  if (score <= 5) {
+  if (score <= 10) {
     result = "低リスク";
-    advice = "安全意識が高い状態です。今後も継続しましょう。";
-  } else if (score <= 10) {
+    advice = "安全意識が高い状態です。今後も継続してセキュリティ対策を行いましょう。";
+  } else if (score <= 20) {
     result = "注意";
-    advice = "パスワード管理や更新を見直すとより安全です。";
-  } else if (score <= 15) {
+    advice = "基本的な対策はできていますが、パスワード管理や更新頻度を見直すとより安全です。";
+  } else if (score <= 30) {
     result = "高リスク";
-    advice = "フィッシングや情報漏洩の可能性があります。";
+    advice = "フィッシング詐欺や情報漏洩に遭う可能性があります。二段階認証や公式サイト確認を徹底しましょう。";
   } else {
     result = "非常に高リスク";
-    advice = "早急にセキュリティ対策が必要です。";
+    advice = "早急なセキュリティ対策が必要です。被害に遭う前に行動を見直してください。";
   }
 
   document.body.innerHTML = `
     <h1>診断結果</h1>
     <h2>${result}</h2>
+    <p>あなたのリスクスコア：${score}</p>
     <p>${advice}</p>
+    <p style="font-size: 0.9em; color: gray;">
+      ※本診断は教育目的であり、実際の被害を保証するものではありません。
+    </p>
   `;
 }
-
