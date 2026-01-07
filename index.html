@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>サイバーリスク診断</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>サイバーリスク診断</title>
+
+    <!-- ★ ここが最重要 -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <div class="container">
-    <img src="images/security.png" alt="セキュリティイラスト" class="top-image">
+    <h1>サイバーリスク診断</h1>
 
-    <h1>サイバー犯罪リスク診断</h1>
     <p class="description">
-        日常のネット利用から、サイバー犯罪に巻き込まれるリスクをチェックします
+        あなたのネット利用に潜むリスクをチェックします
     </p>
 
-    <div class="card">
-        <div id="question"></div>
+    <img src="images/security.png" alt="セキュリティ" class="top-image">
 
-        <div id="choices">
-            <button onclick="answer(0)">いいえ</button>
-            <button onclick="answer(2)">たまにある</button>
-            <button onclick="answer(3)">よくある</button>
-        </div>
+    <div class="card">
+        <p id="question"></p>
+
+        <button onclick="answer(2)">はい</button>
+        <button onclick="answer(0)">いいえ</button>
     </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
