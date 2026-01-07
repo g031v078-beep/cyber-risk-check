@@ -21,7 +21,7 @@ let score = 0;
 
 const questionEl = document.getElementById("question");
 
-// 最初の質問表示
+// 最初の質問
 questionEl.textContent = questions[current];
 
 function answer(point) {
@@ -40,6 +40,7 @@ function showResult() {
   let advice = "";
   let resultClass = "";
 
+  // ★ 判定基準を最大30点に合わせて調整
   if (score <= 10) {
     result = "低リスク";
     advice = "安全意識が高い状態です。今後も継続してセキュリティ対策を行いましょう。";
@@ -64,7 +65,7 @@ function showResult() {
 
       <div class="card">
         <h2 class="result ${resultClass}">${result}</h2>
-        <p>あなたのリスクスコア：${score}</p>
+        <p>あなたのリスクスコア：${score} / 30</p>
         <p>${advice}</p>
 
         <button class="restart-button" onclick="restart()">
@@ -78,8 +79,7 @@ function showResult() {
     </div>
   `;
 }
+
 function restart() {
-    location.reload();
-  }
-
-
+  location.reload();
+}
