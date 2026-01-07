@@ -65,3 +65,29 @@ button {
 button:hover {
   background-color: #1565c0;
 }
+
+/* 診断結果の文字色 */
+.result {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+/* 低リスク（青） */
+.result.low {
+  color: #1e88e5;
+}
+
+/* 注意（オレンジ） */
+.result.medium {
+  color: #f9a825;
+}
+
+/* 高リスク（赤） */
+.result.high {
+  color: #e53935;
+}
+
+/* 非常に高リスク（濃い赤） */
+.result.very-high {
+  color: #b71c1c;
+}
